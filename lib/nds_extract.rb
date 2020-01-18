@@ -37,11 +37,11 @@ end
 
 
 
-def total_gross(directors_database)
+def total_gross(source)
    totgross=0
    count =0 
-   while count < directors_database.length do
-     totgross+= directors_totals(directors_database)[list_of_directors(directors_database)[count]]
+   while count < source.length do
+     totgross+= directors_totals(source)[list_of_directors(source)[count]]
      count +=1
    end
 p totgross
