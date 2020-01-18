@@ -24,11 +24,27 @@ def gross_for_director(d)
   total
 end
 
+
 def list_of_directors(source)
-  # Write this implementation
+  dirnames=0 
+  list=[]
+    while dirnames < source.length do
+    list<< source[dirnames][:name]
+    dirnames+=1  
+end
+list
 end
 
-def total_gross(source)
+
+
+def total_gross(directors_database)
+   totgross=0
+   count =0 
+   while count < directors_database.length do
+     totgross+= directors_totals(directors_database)[list_of_directors(directors_database)[count]]
+     count +=1
+   end
+p totgross
   # Write this implementation
   #
   # Should use methods:
@@ -39,5 +55,7 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
 end
+
+
 
 
